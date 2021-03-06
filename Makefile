@@ -10,7 +10,7 @@ CAMLLEX=ocamllex
 CAMLDEP=ocamldep
 DEPFLAGS=$(INCLUDES)
 COMPFLAGS=$(FLAGS) -dtypes -warn-error A $(INCLUDES)
-LINKFLAGS=$(FLAGS) -cclib -lz3 -cclib -lz3stubs /usr/local/lib/ocaml/libcamlidl.a z3.cmxa \
+LINKFLAGS=$(FLAGS) -cclib -lz3 -cclib -lrt -cclib -lz3stubs /usr/local/lib/ocaml/libcamlidl.a z3.cmxa \
 		 -I external/ocamlgraph/ \
 		 -I external/z3/ocaml -I external/z3/bin -I external/z3/lib
 INCLUDES=-I external/z3/ocaml/ \
